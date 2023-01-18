@@ -19,3 +19,6 @@ Roles of Customer are
 1. Login using his/her username and password
 2. Transfer the money from his account to other account
 3. Checking the transaction history
+
+# Flow Chart
+![flowchart](https://user-images.githubusercontent.com/70317048/213243285-5ea83874-038e-41e9-9124-b010f83e84d4.png)
