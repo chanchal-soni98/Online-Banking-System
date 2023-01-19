@@ -17,12 +17,9 @@ public class DBUtil {
 			e.printStackTrace();
 		}
 		
-		String url="jdbc:mysql://localhost:3306/java";
-		
-		
-		
+		String url="jdbc:mysql://localhost:3306/cw_project";
 		try {
-			conn= DriverManager.getConnection(url,"root","Mindhunter@1");
+			conn= DriverManager.getConnection(url,"root","Soni@123");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
