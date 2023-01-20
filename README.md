@@ -22,39 +22,3 @@ Roles of Customer are
 
 # Flow Chart
 ![flowchart](https://user-images.githubusercontent.com/70317048/213243285-5ea83874-038e-41e9-9124-b010f83e84d4.png)
-
-# Database
-1.  create table accountants(username varchar(20), password varchar(10));
-
- desc accountants;
-+----------+-------------+------+-----+---------+-------+
-| Field    | Type        | Null | Key | Default | Extra |
-+----------+-------------+------+-----+---------+-------+
-| username | varchar(20) | YES  |     | NULL    |       |
-| password | varchar(10) | YES  |     | NULL    |       |
-+----------+-------------+------+-----+---------+-------+
-
-2. create table customers(accno varchar(12) primary key  Not Null,username varchar(20), password varchar(10), mobile varchar(10), balance int);
-
- desc customers;
-+----------+-------------+------+-----+---------+-------+
-| Field    | Type        | Null | Key | Default | Extra |
-+----------+-------------+------+-----+---------+-------+
-| accno    | varchar(12) | NO   | PRI | NULL    |       |
-| username | varchar(20) | YES  |     | NULL    |       |
-| password | varchar(10) | YES  |     | NULL    |       |
-| mobile   | varchar(10) | YES  |     | NULL    |       |
-| balance  | int         | YES  |     | NULL    |       |
-+----------+-------------+------+-----+---------+-------+
-
-3.  create table transactions(accno varchar(12), debit int, credit int, available_balance int);
-
- desc transactions;
-+-------------------+-------------+------+-----+---------+-------+
-| Field             | Type        | Null | Key | Default | Extra |
-+-------------------+-------------+------+-----+---------+-------+
-| accno             | varchar(12) | YES  |     | NULL    |       |
-| debit             | int         | YES  |     | NULL    |       |
-| credit            | int         | YES  |     | NULL    |       |
-| available_balance | int         | YES  |     | NULL    |       |
-+-------------------+-------------+------+-----+---------+-------+
