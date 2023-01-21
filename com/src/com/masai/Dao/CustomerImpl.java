@@ -14,6 +14,8 @@ import com.masai.bean.Customer;
 import com.masai.bean.Transactions;
 import com.masai.exceptions.AccountantException;
 import com.masai.exceptions.CustomerException;
+import com.masai.usecases.GetAllCustomerUseCase;
+import com.masai.usecases.RegisterCustomerUseCase1;
 
 public class CustomerImpl implements CustomerDao{
 
