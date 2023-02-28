@@ -21,4 +21,4 @@ Roles of Customer are
 3. Checking the transaction history
 
 # Flow Chart
-![flowchart](https://user-images.githubusercontent.com/70317048/213243285-5ea83874-038e-41e9-9124-b010f83e84d4.png)
+![flowchart](https://user-images.githubusercontent.com/70317048/221798846-c073abf1-c7ce-49b9-896e-38422bdff70f.png)
