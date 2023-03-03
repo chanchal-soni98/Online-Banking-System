@@ -322,7 +322,7 @@ public class CustomerImpl implements CustomerDao{
 				if (x > 0) {
 					System.out.println("Information updated successfully");
 				} else {
-					System.out.println("Information not updated");
+					throw new CustomerException("Information not updated");
 				}
 
 			} else {
@@ -351,7 +351,7 @@ public class CustomerImpl implements CustomerDao{
 			if (x > 0) {
 				System.out.println("Account removed successfully");
 			} else {
-				System.out.println("Account not exists");
+				throw new CustomerException("Account not exists");
 			}
 
 		} catch (SQLException se) {
@@ -445,7 +445,7 @@ public class CustomerImpl implements CustomerDao{
 			if (x > 0) {
 				System.out.println(amount + " Deposited succesfully");
 			} else {
-				System.out.println(amount + " Not deposited");
+				throw new CustomerException("Not deposited");
 			}
 
 			Customer customer = getCustomerByAcc(accno);
@@ -546,12 +546,11 @@ public class CustomerImpl implements CustomerDao{
 					System.out.println("and credited to " + " " + raccno + " " + " account");
 					System.out.println("Available Balance in your acc is " + abalance);
 				} else {
-					System.out.println(amount + "Rs Withdrawal fail");
+					throw new CustomerException("Withdrawal fail");
 				}
 
 			} else {
-				System.out.println("No sufficient balance to transfer");
-				System.out.println("Your balance is :" + abalance);
+				throw new CustomerException("Insufficient balance.");
 			}
 
 			Customer customer = getCustomerByAcc(accno);
@@ -603,7 +602,7 @@ public class CustomerImpl implements CustomerDao{
 			}
 
 			if (transactions.size() == 0) {
-				System.out.println("No transactions available");
+				throw new CustomerException("No any transaction done");
 			} else {
 				transactions.forEach(t -> System.out.println(t));
 			}
@@ -635,7 +634,7 @@ public class CustomerImpl implements CustomerDao{
 			}
 
 			if (transactions.size() == 0) {
-				System.out.println("No any transaction done");
+				throw new CustomerException("No any transaction done");
 			} else {
 				transactions.forEach(t -> System.out.println(t));
 			}
