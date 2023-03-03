@@ -476,7 +476,7 @@ public class CustomerImpl implements CustomerDao{
 
 			int balance = customer.getBalance();
 
-			if (balance > amount || balance == amount) {
+			if (balance >= amount) {
 				balance = balance - amount;
 				customer.setBalance(balance);
 
@@ -488,7 +488,7 @@ public class CustomerImpl implements CustomerDao{
 				if (x > 0) {
 					System.out.println(amount + "Rs Withdrawal successfull");
 				} else {
-					System.out.println(amount + "Rs Withdrawal fail");
+					throw new CustomerException("Withdrawal fail");
 				}
 
 				customer = getCustomerByAcc(accno);
@@ -504,8 +504,8 @@ public class CustomerImpl implements CustomerDao{
 				ps1.executeUpdate();
 
 			} else {
-				System.out.println("No sufficient balance to withdraw");
-				System.out.println("Your balance is :" + balance);
+				throw new CustomerException("Insufficient balance.");
+				
 			}
 
 		} catch (SQLException e) {
