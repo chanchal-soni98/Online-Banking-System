@@ -16,7 +16,7 @@ public class Main {
 		while (flag) {
 
 		System.out.println("=====================================\n"
-				+ "| Welcome to the Online Banking System:| "+"\n"
+				+ "Welcome to the Online Banking System:"+"\n"
 				+"=====================================");
 		System.out.println("Choose the following Option:"+"\n"+"---------------------------------");
 		System.out.println("1.Log in as a Accountat");
@@ -27,9 +27,9 @@ public class Main {
 				int choice = sc.nextInt();
 				switch (choice) {
 				case 1:
-					System.out.println("Enter username:");
+					System.out.println("Enter your username:");
 					String acUsername = sc.next();
-					System.out.println("Enter password:");
+					System.out.println("Enter your password:");
 					String acPassword = sc.next();
 
 					CustomerDao cdao = new CustomerImpl();
