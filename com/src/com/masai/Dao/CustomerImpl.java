@@ -541,6 +541,7 @@ public class CustomerImpl implements CustomerDao{
 				int x = aps.executeUpdate();
 				int y = rps.executeUpdate();
 				if (x > 0 && y > 0) {
+			
 					System.out.println(amount + "Rs debited from your account");
 					System.out.println("and credited to " + " " + raccno + " " + " account");
 					System.out.println("Available Balance in your acc is " + abalance);

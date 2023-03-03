@@ -24,10 +24,10 @@ public class RegisterCustomerUseCase2 {
 		boolean flag = true;
 		while (flag) {
 
-			System.out.println("Enter Minimum balance to open account 10rs...");
+			System.out.println("Enter Minimum balance to open account 100rs...");
 
 			int balance = sc.nextInt();
-			if (balance >= 10) {
+			if (balance >= 100) {
 				flag=false;
 
 				Customer customer = new Customer();
